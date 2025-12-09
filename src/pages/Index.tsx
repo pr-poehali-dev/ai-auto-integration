@@ -115,8 +115,7 @@ export default function Index() {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="border-purple-500/50 hover:bg-purple-500/10 hover-scale"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white shadow-lg shadow-purple-500/50 hover-scale"
                 onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Icon name="Calendar" className="mr-2" size={20} />
