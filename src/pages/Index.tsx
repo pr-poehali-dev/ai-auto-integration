@@ -89,7 +89,7 @@ export default function Index() {
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm">
               <Icon name="Sparkles" className="text-cyan-400" size={16} />
-              <span className="text-sm text-cyan-300">20 января 2026 • Москва</span>
+              <span className="text-sm text-cyan-300">22 января 2026 • Москва</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
