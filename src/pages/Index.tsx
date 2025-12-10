@@ -87,6 +87,14 @@ export default function Index() {
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
+            <div className="flex justify-center mb-8">
+              <img 
+                src="https://cdn.poehali.dev/files/Вариант 2 .jpg" 
+                alt="ABC Auto Business Consulting" 
+                className="h-32 md:h-40 w-auto object-contain"
+              />
+            </div>
+            
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm">
               <Icon name="Sparkles" className="text-cyan-400" size={16} />
               <span className="text-sm text-cyan-300">22 января 2026 • Москва</span>
