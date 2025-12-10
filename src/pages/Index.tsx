@@ -89,7 +89,7 @@ export default function Index() {
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="flex justify-center mb-8">
               <img 
-                src="https://cdn.poehali.dev/files/Вариант 2 .jpg" 
+                src="https://cdn.poehali.dev/files/nano-banana_20251210_201948_98eda1b2.png" 
                 alt="ABC Auto Business Consulting" 
                 className="h-32 md:h-40 w-auto object-contain"
               />
