@@ -35,16 +35,70 @@ export default function Index() {
     { name: 'Елена Волкова', position: 'Руководитель отдела цифровизации', company: 'Hyundai Motor CIS' },
   ];
 
-  const schedule = [
+  interface ScheduleItem {
+    time?: string;
+    title: string;
+    subtitle?: string;
+    topics?: string[];
+    cases?: string;
+    isSession?: boolean;
+  }
+
+  const schedule: ScheduleItem[] = [
     { time: '10:00 - 10:30', title: 'Регистрация и welcome-кофе' },
-    { time: '10:30 - 11:15', title: 'Открытие конференции. ИИ в автопроме: тренды 2026' },
-    { time: '11:15 - 12:00', title: 'Автоматизация продаж с помощью ИИ-ассистентов' },
-    { time: '12:00 - 12:45', title: 'Предиктивная аналитика в сервисном обслуживании' },
+    { 
+      title: 'СЕССИЯ 1: ИИ НА ФРОНТЕ: КЛИЕНТСКИЙ ОПЫТ И ПРОДАЖИ',
+      isSession: true,
+      topics: [
+        'Основные системные ошибки и смена парадигмы',
+        'Цифровизация и клиентские ожидания',
+        'Системные последствия и смена клиентских ценности (ожидания поколения Z - технологичность и комфорт)',
+        'Сервис как точка дифференциации',
+        'Маркетинг и коммуникации: гибкие предложения',
+        'Ошибки традиционных дилеров и действия лидеров рынка',
+        'Возможности для российских дилеров'
+      ],
+      cases: 'Чат-боты, которые действительно продают и сокращают нагрузку на менеджеров. Прогнозная аналитика спроса на модели и комплектации. Генеративный ИИ для персонализированных предложений.'
+    },
     { time: '12:45 - 13:45', title: 'Обед и нетворкинг' },
-    { time: '13:45 - 14:30', title: 'ИИ в маркетинге: персонализация и таргетинг' },
-    { time: '14:30 - 15:15', title: 'Чат-боты нового поколения для дилерских центров' },
-    { time: '15:15 - 16:00', title: 'Кейсы внедрения: от пилота до масштабирования' },
-    { time: '16:00 - 17:00', title: 'Панельная дискуссия с топ-менеджерами' },
+    {
+      title: 'СЕССИЯ 2: ИИ В СЕРВИСЕ: ЭФФЕКТИВНОСТЬ И ЛОЯЛЬНОСТЬ',
+      isSession: true,
+      topics: [
+        'Почему сервис важнее продаж',
+        'Системная ошибка: только количество заказ-нарядов',
+        'Апсейл как ключевой инструмент',
+        'Долгосрочные отношения с клиентом',
+        'Сервис как маркетинговый инструмент',
+        'Использование цифровых инструментов (ИИ)',
+        'Пакеты услуг и подписка'
+      ],
+      cases: 'Предиктивный сервис, ИИ для управления запасными частями, оптимизация логистики дилерских перевозок. Умный fleet-менеджмент. Как считать экономику ИИ-сервиса.'
+    },
+    {
+      title: 'СЕССИЯ 3: ВНУТРЕННЯЯ КУХНЯ: ИИ ДЛЯ HR, МАРКЕТИНГА И БЕЗОПАСНОСТИ',
+      isSession: true,
+      topics: [
+        'Эволюция маркетинга: маркетинг 1.0 в российском автобизнесе (пример устаревшего подхода)',
+        'Маркетинг 6.0 — ключевые принципы: Digital-коммуникации, контент и сообщество, персонализация предложений, иммерсивный опыт',
+        'Примеры китайских лидеров',
+        'Гибкость предложений',
+        'Сервис как часть маркетинга',
+        'KPI нового маркетинга и долгосрочные результаты'
+      ],
+      cases: 'ИИ-ассистенты для onboarding, анализ тональности обращений в КСО, генерация маркетингового контента'
+    },
+    {
+      title: 'СЕССИЯ 4: ВНЕДРЕНИЕ ИИ: С ЧЕГО НАЧАТЬ?',
+      isSession: true,
+      topics: [
+        'Введение в ИИ',
+        'Разбор внедрения инструментов ИИ в повседневную жизнь сотрудников дилерского центра на примере реальных кейсов',
+        'Готовые фреймворки',
+        'Шаблоны промптов и т.д.'
+      ],
+      cases: 'Формат: делай как я, повторяй за мной. ИИ – это не сложно!'
+    },
     { time: '17:00 - 18:00', title: 'Неформальное общение и фуршет' },
   ];
 
@@ -204,14 +258,49 @@ export default function Index() {
           
           <div className="space-y-4">
             {schedule.map((item, index) => (
-              <Card key={index} className="bg-slate-900/50 border-purple-500/20 backdrop-blur hover-scale">
-                <CardContent className="p-6 flex flex-col md:flex-row md:items-center gap-4">
-                  <div className="flex items-center gap-3 md:w-40 shrink-0">
-                    <Icon name="Clock" className="text-purple-400" size={20} />
-                    <span className="text-purple-300 font-semibold">{item.time}</span>
-                  </div>
-                  <div className="h-px md:h-12 md:w-px bg-gradient-to-r md:bg-gradient-to-b from-transparent via-purple-500/50 to-transparent" />
-                  <p className="text-gray-200">{item.title}</p>
+              <Card 
+                key={index} 
+                className={`backdrop-blur hover-scale ${
+                  item.isSession 
+                    ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-400/40' 
+                    : 'bg-slate-900/50 border-purple-500/20'
+                }`}
+              >
+                <CardContent className="p-6">
+                  {item.isSession ? (
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-bold text-purple-300 mb-4">{item.title}</h3>
+                      {item.topics && (
+                        <ul className="space-y-2 ml-4">
+                          {item.topics.map((topic, i) => (
+                            <li key={i} className="text-gray-300 flex items-start gap-2">
+                              <Icon name="ChevronRight" className="text-cyan-400 mt-1 shrink-0" size={16} />
+                              <span>{topic}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      {item.cases && (
+                        <div className="mt-4 p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/20">
+                          <p className="text-sm font-semibold text-cyan-300 mb-2">Кейсы:</p>
+                          <p className="text-gray-300 text-sm">{item.cases}</p>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="flex flex-col md:flex-row md:items-center gap-4">
+                      {item.time && (
+                        <>
+                          <div className="flex items-center gap-3 md:w-40 shrink-0">
+                            <Icon name="Clock" className="text-purple-400" size={20} />
+                            <span className="text-purple-300 font-semibold">{item.time}</span>
+                          </div>
+                          <div className="h-px md:h-12 md:w-px bg-gradient-to-r md:bg-gradient-to-b from-transparent via-purple-500/50 to-transparent" />
+                        </>
+                      )}
+                      <p className="text-gray-200">{item.title}</p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
