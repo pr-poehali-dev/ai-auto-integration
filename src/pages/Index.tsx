@@ -262,28 +262,28 @@ export default function Index() {
                 key={index} 
                 className={`backdrop-blur hover-scale ${
                   item.isSession 
-                    ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-400/40' 
-                    : 'bg-slate-900/50 border-purple-500/20'
+                    ? 'bg-gradient-to-r from-purple-600/40 to-pink-600/40 border-purple-400/60 shadow-lg shadow-purple-500/20' 
+                    : 'bg-slate-800/80 border-cyan-400/40'
                 }`}
               >
                 <CardContent className="p-6">
                   {item.isSession ? (
                     <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-purple-300 mb-4">{item.title}</h3>
+                      <h3 className="text-xl font-bold text-purple-100 mb-4">{item.title}</h3>
                       {item.topics && (
                         <ul className="space-y-2 ml-4">
                           {item.topics.map((topic, i) => (
-                            <li key={i} className="text-gray-300 flex items-start gap-2">
-                              <Icon name="ChevronRight" className="text-cyan-400 mt-1 shrink-0" size={16} />
+                            <li key={i} className="text-gray-100 flex items-start gap-2">
+                              <Icon name="ChevronRight" className="text-cyan-300 mt-1 shrink-0" size={16} />
                               <span>{topic}</span>
                             </li>
                           ))}
                         </ul>
                       )}
                       {item.cases && (
-                        <div className="mt-4 p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/20">
-                          <p className="text-sm font-semibold text-cyan-300 mb-2">Кейсы:</p>
-                          <p className="text-gray-300 text-sm">{item.cases}</p>
+                        <div className="mt-4 p-4 bg-cyan-500/30 rounded-lg border-2 border-cyan-400/50 shadow-md shadow-cyan-500/30">
+                          <p className="text-sm font-semibold text-cyan-100 mb-2">Кейсы:</p>
+                          <p className="text-gray-100 text-sm">{item.cases}</p>
                         </div>
                       )}
                     </div>
@@ -292,13 +292,13 @@ export default function Index() {
                       {item.time && (
                         <>
                           <div className="flex items-center gap-3 md:w-40 shrink-0">
-                            <Icon name="Clock" className="text-purple-400" size={20} />
-                            <span className="text-purple-300 font-semibold">{item.time}</span>
+                            <Icon name="Clock" className="text-cyan-300" size={20} />
+                            <span className="text-cyan-200 font-semibold">{item.time}</span>
                           </div>
-                          <div className="h-px md:h-12 md:w-px bg-gradient-to-r md:bg-gradient-to-b from-transparent via-purple-500/50 to-transparent" />
+                          <div className="h-px md:h-12 md:w-px bg-gradient-to-r md:bg-gradient-to-b from-transparent via-cyan-400/70 to-transparent" />
                         </>
                       )}
-                      <p className="text-gray-200">{item.title}</p>
+                      <p className="text-gray-100 font-medium">{item.title}</p>
                     </div>
                   )}
                 </CardContent>
