@@ -147,20 +147,20 @@ export default function Index() {
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
-            <div className="flex justify-center mb-8">
-              <div className="relative">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+              <div className="relative flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-500/30 blur-2xl rounded-full" />
                 <img 
                   src="https://cdn.poehali.dev/files/Реалистичное фото-высветленный.png" 
                   alt="ABC Auto Business Consulting" 
-                  className="h-32 md:h-40 w-auto object-contain relative z-10 drop-shadow-[0_0_30px_rgba(14,165,233,0.6)]"
+                  className="h-48 md:h-56 w-auto object-contain relative z-10 drop-shadow-[0_0_30px_rgba(14,165,233,0.6)]"
                 />
               </div>
-            </div>
-            
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm">
-              <Icon name="Sparkles" className="text-cyan-400" size={16} />
-              <span className="text-sm text-cyan-300">22 января 2026 • Москва</span>
+              
+              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm">
+                <Icon name="Sparkles" className="text-cyan-400" size={24} />
+                <span className="text-xl md:text-2xl text-cyan-300 font-medium">22 января 2026 • Москва</span>
+              </div>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
