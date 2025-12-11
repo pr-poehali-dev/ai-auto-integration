@@ -157,9 +157,9 @@ export default function Index() {
                 />
               </div>
               
-              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm">
-                <Icon name="Sparkles" className="text-cyan-400" size={24} />
-                <span className="text-xl md:text-2xl text-cyan-300 font-medium">22 января 2026 • Москва</span>
+              <div className="flex items-center gap-4 px-8 py-4 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm">
+                <Icon name="Sparkles" className="text-cyan-400" size={32} />
+                <span className="text-2xl md:text-4xl text-cyan-300 font-medium">22 января 2026 • Москва</span>
               </div>
             </div>
             
