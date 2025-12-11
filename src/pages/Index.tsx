@@ -102,7 +102,13 @@ export default function Index() {
     { time: '17:00 - 18:00', title: 'Неформальное общение и фуршет' },
   ];
 
-  const partners = ['Чанган Моторс', 'Джили Мотор', 'HAVAL', 'Hyundai', 'Яндекс', 'Сбер'];
+  const partners = [
+    { name: 'Changan', logo: 'https://cdn.poehali.dev/files/CHangan.png' },
+    { name: 'Evolute', logo: 'https://cdn.poehali.dev/files/Evolute.png' },
+    { name: 'Geely', logo: 'https://cdn.poehali.dev/files/Geely.png' },
+    { name: 'Jetour', logo: 'https://cdn.poehali.dev/files/Jetour.png' },
+    { name: 'Voyah', logo: 'https://cdn.poehali.dev/files/Voyah.png' },
+  ];
 
   const handleRegistration = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -317,13 +323,16 @@ export default function Index() {
             Партнёры конференции
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {partners.map((partner, index) => (
-              <Card key={index} className="bg-slate-900/50 border-cyan-500/20 backdrop-blur hover-scale">
-                <CardContent className="p-6 flex items-center justify-center min-h-[120px]">
-                  <p className="text-center font-semibold text-gray-300">{partner}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="flex items-center justify-center p-8 bg-slate-900/50 border border-cyan-500/20 backdrop-blur rounded-lg hover-scale relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 blur-xl rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name} 
+                  className="h-12 w-auto object-contain relative z-10 opacity-80 group-hover:opacity-100 transition-opacity filter brightness-0 invert"
+                />
+              </div>
             ))}
           </div>
         </div>
