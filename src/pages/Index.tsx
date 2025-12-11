@@ -160,7 +160,7 @@ export default function Index() {
               
               <div className="flex items-center gap-4 px-8 py-4 rounded-full bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm">
                 <Icon name="Sparkles" className="text-cyan-400" size={32} />
-                <span className="text-2xl md:text-4xl text-cyan-300 font-medium">22 января 2026 • Москва</span>
+                <span className="text-2xl md:text-4xl text-cyan-300 font-medium">11 февраля 2026 • Москва</span>
               </div>
             </div>
             
@@ -264,7 +264,7 @@ export default function Index() {
           <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Программа конференции
           </h2>
-          <p className="text-center text-gray-200 mb-12 text-lg">20 января 2026</p>
+          <p className="text-center text-gray-200 mb-12 text-lg">11 февраля 2026</p>
           
           <div className="space-y-4">
             {schedule.map((item, index) => (
@@ -590,7 +590,7 @@ export default function Index() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-300">Дата</p>
-                    <p className="font-semibold text-white">20 января 2026</p>
+                    <p className="font-semibold text-white">11 февраля 2026</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-300">Время</p>
