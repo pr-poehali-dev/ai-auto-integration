@@ -414,14 +414,14 @@ export default function Index() {
             <DialogTitle className="text-2xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Регистрация на конференцию
             </DialogTitle>
-            <DialogDescription className="text-gray-400">
+            <DialogDescription className="text-gray-200">
               Заполните форму, и мы вышлем вам электронный билет
             </DialogDescription>
           </DialogHeader>
           
           <form onSubmit={handleRegistration} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="fullName">ФИО *</Label>
+              <Label htmlFor="fullName" className="text-white">ФИО *</Label>
               <Input 
                 id="fullName" 
                 name="fullName" 
@@ -433,7 +433,7 @@ export default function Index() {
             
             <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="email">Email *</Label>
+                <Label htmlFor="email" className="text-white">Email *</Label>
                 <Input 
                   id="email" 
                   name="email" 
@@ -445,7 +445,7 @@ export default function Index() {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="phone">Телефон *</Label>
+                <Label htmlFor="phone" className="text-white">Телефон *</Label>
                 <Input 
                   id="phone" 
                   name="phone" 
@@ -459,7 +459,7 @@ export default function Index() {
             
             <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="company">Компания *</Label>
+                <Label htmlFor="company" className="text-white">Компания *</Label>
                 <Input 
                   id="company" 
                   name="company" 
@@ -470,7 +470,7 @@ export default function Index() {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="position">Должность *</Label>
+                <Label htmlFor="position" className="text-white">Должность *</Label>
                 <Input 
                   id="position" 
                   name="position" 
@@ -482,15 +482,15 @@ export default function Index() {
             </div>
             
             <div className="space-y-2">
-              <Label>Формат участия *</Label>
+              <Label className="text-white">Формат участия *</Label>
               <div className="flex gap-4">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="format" value="offline" required className="text-cyan-500" />
-                  <span>Очно</span>
+                  <span className="text-white">Очно</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="format" value="online" required className="text-cyan-500" />
-                  <span>Онлайн</span>
+                  <span className="text-white">Онлайн</span>
                 </label>
               </div>
             </div>
@@ -520,8 +520,8 @@ export default function Index() {
               <CardHeader className="pt-6">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <p className="text-sm text-gray-400">Конференция</p>
-                    <CardTitle className="text-xl">ИИ в автопроме 2026</CardTitle>
+                    <p className="text-sm text-gray-300">Конференция</p>
+                    <CardTitle className="text-xl text-white">ИИ в автопроме 2026</CardTitle>
                   </div>
                   <Icon name="Sparkles" className="text-cyan-400" size={32} />
                 </div>
@@ -530,28 +530,28 @@ export default function Index() {
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-sm text-gray-400">Участник</p>
-                    <p className="font-semibold">{ticketData.fullName}</p>
+                    <p className="text-sm text-gray-300">Участник</p>
+                    <p className="font-semibold text-white">{ticketData.fullName}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Компания</p>
-                    <p className="font-semibold">{ticketData.company}</p>
+                    <p className="text-sm text-gray-300">Компания</p>
+                    <p className="font-semibold text-white">{ticketData.company}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Должность</p>
-                    <p className="font-semibold">{ticketData.position}</p>
+                    <p className="text-sm text-gray-300">Должность</p>
+                    <p className="font-semibold text-white">{ticketData.position}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Формат</p>
-                    <p className="font-semibold">{ticketData.format === 'offline' ? 'Очно' : 'Онлайн'}</p>
+                    <p className="text-sm text-gray-300">Формат</p>
+                    <p className="font-semibold text-white">{ticketData.format === 'offline' ? 'Очно' : 'Онлайн'}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Дата</p>
-                    <p className="font-semibold">20 января 2026</p>
+                    <p className="text-sm text-gray-300">Дата</p>
+                    <p className="font-semibold text-white">20 января 2026</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Время</p>
-                    <p className="font-semibold">10:00 - 18:00</p>
+                    <p className="text-sm text-gray-300">Время</p>
+                    <p className="font-semibold text-white">10:00 - 18:00</p>
                   </div>
                 </div>
                 
