@@ -168,11 +168,11 @@ export default function Index() {
               Конференция по внедрению ИИ
             </h1>
             
-            <p className="text-2xl md:text-3xl text-gray-300 font-light">
+            <p className="text-2xl md:text-3xl text-white font-light">
               в бизнес-процессы автомобильных компаний
             </p>
             
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Откройте новые горизонты: ИИ как катализатор роста в автомобильной отрасли
             </p>
             
@@ -207,7 +207,7 @@ export default function Index() {
                 <Icon name="Users" className="text-cyan-400 mb-2" size={32} />
                 <CardTitle className="text-cyan-400">Целевая аудитория</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-300">
+              <CardContent className="text-white">
                 Топ- и middle-менеджмент автомобильных импортеров и дилеров: продажи, сервис, маркетинг, ИТ, HR
               </CardContent>
             </Card>
@@ -240,7 +240,7 @@ export default function Index() {
           <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Спикеры конференции
           </h2>
-          <p className="text-center text-gray-400 mb-12">Ведущие ТОП-менеджеры ИТ-компаний и автомобильных брендов</p>
+          <p className="text-center text-gray-200 mb-12 text-lg">Ведущие ТОП-менеджеры ИТ-компаний и автомобильных брендов</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {speakers.map((speaker, index) => (
@@ -249,8 +249,8 @@ export default function Index() {
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
                     {speaker.name.split(' ').map(n => n[0]).join('')}
                   </div>
-                  <CardTitle className="text-center text-lg">{speaker.name}</CardTitle>
-                  <CardDescription className="text-center text-sm">{speaker.position}</CardDescription>
+                  <CardTitle className="text-center text-lg text-white">{speaker.name}</CardTitle>
+                  <CardDescription className="text-center text-sm text-gray-200">{speaker.position}</CardDescription>
                   <p className="text-center text-cyan-400 text-sm font-medium">{speaker.company}</p>
                 </CardHeader>
               </Card>
@@ -264,7 +264,7 @@ export default function Index() {
           <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Программа конференции
           </h2>
-          <p className="text-center text-gray-400 mb-12">20 января 2026</p>
+          <p className="text-center text-gray-200 mb-12 text-lg">20 января 2026</p>
           
           <div className="space-y-4">
             {schedule.map((item, index) => (
@@ -279,11 +279,11 @@ export default function Index() {
                 <CardContent className="p-6">
                   {item.isSession ? (
                     <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-purple-100 mb-4">{item.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
                       {item.topics && (
                         <ul className="space-y-2 ml-4">
                           {item.topics.map((topic, i) => (
-                            <li key={i} className="text-gray-100 flex items-start gap-2">
+                            <li key={i} className="text-white flex items-start gap-2">
                               <Icon name="ChevronRight" className="text-cyan-300 mt-1 shrink-0" size={16} />
                               <span>{topic}</span>
                             </li>
@@ -292,8 +292,8 @@ export default function Index() {
                       )}
                       {item.cases && (
                         <div className="mt-4 p-4 bg-cyan-500/30 rounded-lg border-2 border-cyan-400/50 shadow-md shadow-cyan-500/30">
-                          <p className="text-sm font-semibold text-cyan-100 mb-2">Кейсы:</p>
-                          <p className="text-gray-100 text-sm">{item.cases}</p>
+                          <p className="text-sm font-semibold text-white mb-2">Кейсы:</p>
+                          <p className="text-white text-sm">{item.cases}</p>
                         </div>
                       )}
                     </div>
@@ -308,7 +308,7 @@ export default function Index() {
                           <div className="h-px md:h-12 md:w-px bg-gradient-to-r md:bg-gradient-to-b from-transparent via-cyan-400/70 to-transparent" />
                         </>
                       )}
-                      <p className="text-gray-100 font-medium">{item.title}</p>
+                      <p className="text-white font-medium">{item.title}</p>
                     </div>
                   )}
                 </CardContent>
@@ -359,7 +359,7 @@ export default function Index() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-3xl font-bold text-white mb-2">Инна Петухова</h3>
-                <p className="text-xl text-gray-400">Генеральный директор АВС</p>
+                <p className="text-xl text-gray-200">Генеральный директор АВС</p>
               </div>
               
               <div className="space-y-4">
@@ -367,7 +367,7 @@ export default function Index() {
                   <CardContent className="p-4 flex items-center gap-4">
                     <Icon name="Mail" className="text-cyan-400 flex-shrink-0" size={28} />
                     <div className="text-left">
-                      <p className="text-gray-400 text-sm mb-1">Email</p>
+                      <p className="text-gray-300 text-sm mb-1">Email</p>
                       <a href="mailto:Inna.Petuhova@autobisconsult.ru" className="text-cyan-300 hover:text-cyan-200 transition-colors">
                         Inna.Petuhova@autobisconsult.ru
                       </a>
@@ -379,7 +379,7 @@ export default function Index() {
                   <CardContent className="p-4 flex items-center gap-4">
                     <Icon name="Phone" className="text-purple-400 flex-shrink-0" size={28} />
                     <div className="text-left">
-                      <p className="text-gray-400 text-sm mb-1">Телефон</p>
+                      <p className="text-gray-300 text-sm mb-1">Телефон</p>
                       <a href="tel:+79852320005" className="text-purple-300 hover:text-purple-200 transition-colors">
                         +7-985-232-00-05
                       </a>
@@ -395,8 +395,8 @@ export default function Index() {
       <section className="py-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20" />
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6">Не упустите шанс стать частью важного события!</h2>
-          <p className="text-xl text-gray-300 mb-8">Измените будущее автомобильной отрасли вместе с нами</p>
+          <h2 className="text-4xl font-bold mb-6 text-white">Не упустите шанс стать частью важного события!</h2>
+          <p className="text-xl text-white mb-8">Измените будущее автомобильной отрасли вместе с нами</p>
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white shadow-xl shadow-purple-500/50 hover-scale"
