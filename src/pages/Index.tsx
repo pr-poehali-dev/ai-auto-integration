@@ -339,27 +339,54 @@ export default function Index() {
       </section>
 
       <section className="py-20 px-4 bg-slate-900/30">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Контакты
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <Card className="bg-slate-900/50 border-cyan-500/20 backdrop-blur">
-              <CardContent className="p-6 text-center">
-                <Icon name="Mail" className="text-cyan-400 mx-auto mb-3" size={32} />
-                <p className="text-gray-400 text-sm mb-2">Email</p>
-                <p className="text-cyan-300">info@ai-in-auto.com</p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <Card className="bg-slate-900/50 border-cyan-500/20 backdrop-blur overflow-hidden">
+              <CardContent className="p-0">
+                <img 
+                  src="https://cdn.poehali.dev/files/Инна.png" 
+                  alt="Инна Петухова" 
+                  className="w-full h-auto object-cover"
+                />
               </CardContent>
             </Card>
             
-            <Card className="bg-slate-900/50 border-purple-500/20 backdrop-blur">
-              <CardContent className="p-6 text-center">
-                <Icon name="Phone" className="text-purple-400 mx-auto mb-3" size={32} />
-                <p className="text-gray-400 text-sm mb-2">Телефон</p>
-                <p className="text-purple-300">+7 (495) 123-45-67</p>
-              </CardContent>
-            </Card>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-3xl font-bold text-white mb-2">Инна Петухова</h3>
+                <p className="text-xl text-gray-400">Генеральный директор АВС</p>
+              </div>
+              
+              <div className="space-y-4">
+                <Card className="bg-slate-900/50 border-cyan-500/20 backdrop-blur hover-scale">
+                  <CardContent className="p-4 flex items-center gap-4">
+                    <Icon name="Mail" className="text-cyan-400 flex-shrink-0" size={28} />
+                    <div className="text-left">
+                      <p className="text-gray-400 text-sm mb-1">Email</p>
+                      <a href="mailto:Inna.Petuhova@autobisconsult.ru" className="text-cyan-300 hover:text-cyan-200 transition-colors">
+                        Inna.Petuhova@autobisconsult.ru
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-slate-900/50 border-purple-500/20 backdrop-blur hover-scale">
+                  <CardContent className="p-4 flex items-center gap-4">
+                    <Icon name="Phone" className="text-purple-400 flex-shrink-0" size={28} />
+                    <div className="text-left">
+                      <p className="text-gray-400 text-sm mb-1">Телефон</p>
+                      <a href="tel:+79852320005" className="text-purple-300 hover:text-purple-200 transition-colors">
+                        +7-985-232-00-05
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
