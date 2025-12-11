@@ -599,9 +599,29 @@ export default function Index() {
                 </div>
                 
                 <div className="pt-4 border-t border-cyan-500/20">
-                  <div className="bg-white p-4 rounded-lg inline-block">
-                    <div className="w-32 h-32 bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-white text-xs">
-                      QR-код билета
+                  <div className="flex flex-col md:flex-row gap-6 items-start">
+                    <div className="bg-white p-4 rounded-lg">
+                      <div className="w-32 h-32 bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-white text-xs">
+                        QR-код билета
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 space-y-3">
+                      <p className="text-sm text-gray-300 font-semibold">Контакты и ссылки:</p>
+                      <div className="space-y-2 text-sm">
+                        <a href="https://a-b-c.su" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-pink-300 hover:text-pink-200 transition-colors">
+                          <Icon name="Globe" size={16} />
+                          <span>a-b-c.su</span>
+                        </a>
+                        <a href="https://t.me/abc_cons" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors">
+                          <Icon name="Send" size={16} />
+                          <span>t.me/abc_cons</span>
+                        </a>
+                        <a href="https://vk.com/abc_cons" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors">
+                          <Icon name="Users" size={16} />
+                          <span>vk.com/abc_cons</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
