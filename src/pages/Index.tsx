@@ -145,7 +145,7 @@ export default function Index() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-500/30 blur-2xl rounded-full" />
                 <img 
-                  src="https://cdn.poehali.dev/files/nano-banana_20251210_201948_98eda1b2.png" 
+                  src="https://cdn.poehali.dev/files/Реалистичное фото-высветленный.png" 
                   alt="ABC Auto Business Consulting" 
                   className="h-32 md:h-40 w-auto object-contain relative z-10 drop-shadow-[0_0_30px_rgba(14,165,233,0.6)]"
                 />
