@@ -386,6 +386,42 @@ export default function Index() {
                     </div>
                   </CardContent>
                 </Card>
+                
+                <Card className="bg-slate-900/50 border-pink-500/20 backdrop-blur hover-scale">
+                  <CardContent className="p-4 flex items-center gap-4">
+                    <Icon name="Globe" className="text-pink-400 flex-shrink-0" size={28} />
+                    <div className="text-left">
+                      <p className="text-gray-300 text-sm mb-1">Сайт</p>
+                      <a href="https://a-b-c.su" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 transition-colors">
+                        a-b-c.su
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <Card className="bg-slate-900/50 border-cyan-500/20 backdrop-blur hover-scale">
+                    <CardContent className="p-4 flex items-center gap-3">
+                      <Icon name="Send" className="text-cyan-400 flex-shrink-0" size={24} />
+                      <div className="text-left">
+                        <a href="https://t.me/abc_cons" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 transition-colors text-sm">
+                          Telegram
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-slate-900/50 border-purple-500/20 backdrop-blur hover-scale">
+                    <CardContent className="p-4 flex items-center gap-3">
+                      <Icon name="Users" className="text-purple-400 flex-shrink-0" size={24} />
+                      <div className="text-left">
+                        <a href="https://vk.com/abc_cons" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-200 transition-colors text-sm">
+                          VK
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </div>
