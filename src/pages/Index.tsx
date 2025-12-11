@@ -108,6 +108,7 @@ export default function Index() {
     { name: 'Geely', logo: 'https://cdn.poehali.dev/files/Geely.png' },
     { name: 'Jetour', logo: 'https://cdn.poehali.dev/files/Jetour.png' },
     { name: 'Voyah', logo: 'https://cdn.poehali.dev/files/Voyah.png' },
+    { name: 'Сбер', logo: 'https://cdn.poehali.dev/files/СБЕР.png' },
   ];
 
   const handleRegistration = (e: React.FormEvent<HTMLFormElement>) => {
