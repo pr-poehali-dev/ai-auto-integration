@@ -518,6 +518,13 @@ export default function Index() {
               <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500" />
               
               <CardHeader className="pt-6">
+                <div className="flex items-center justify-center mb-6">
+                  <img 
+                    src="https://cdn.poehali.dev/files/Реалистичное фото-высветленный.png" 
+                    alt="ABC Auto Business Consulting" 
+                    className="h-24 w-auto object-contain drop-shadow-[0_0_20px_rgba(14,165,233,0.4)]"
+                  />
+                </div>
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <p className="text-sm text-gray-300">Конференция</p>
@@ -570,6 +577,20 @@ export default function Index() {
                   <Icon name="Download" className="mr-2" size={20} />
                   Скачать билет
                 </Button>
+                
+                <div className="pt-4 border-t border-cyan-500/20 space-y-3">
+                  <p className="text-sm text-gray-300 text-center font-semibold">Контакты организатора:</p>
+                  <div className="flex flex-col gap-2 text-sm">
+                    <a href="mailto:Inna.Petuhova@autobisconsult.ru" className="flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors">
+                      <Icon name="Mail" size={16} />
+                      <span>Inna.Petuhova@autobisconsult.ru</span>
+                    </a>
+                    <a href="tel:+79852320005" className="flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors">
+                      <Icon name="Phone" size={16} />
+                      <span>+7-985-232-00-05</span>
+                    </a>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           )}
