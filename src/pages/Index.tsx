@@ -15,11 +15,13 @@ interface Speaker {
 
 interface RegistrationData {
   fullName: string;
-  email: string;
   phone: string;
+  billingEmail: string;
   company: string;
-  position: string;
-  format: string;
+  inn: string;
+  kpp: string;
+  legalAddress: string;
+  seats: string;
 }
 
 export default function Index() {
@@ -116,11 +118,13 @@ export default function Index() {
     const formData = new FormData(e.currentTarget);
     const data: RegistrationData = {
       fullName: formData.get('fullName') as string,
-      email: formData.get('email') as string,
       phone: formData.get('phone') as string,
+      billingEmail: formData.get('billingEmail') as string,
       company: formData.get('company') as string,
-      position: formData.get('position') as string,
-      format: formData.get('format') as string,
+      inn: formData.get('inn') as string,
+      kpp: formData.get('kpp') as string,
+      legalAddress: formData.get('legalAddress') as string,
+      seats: formData.get('seats') as string,
     };
     
     setTicketData(data);
@@ -455,80 +459,101 @@ export default function Index() {
             </DialogDescription>
           </DialogHeader>
           
-          <form onSubmit={handleRegistration} className="space-y-4">
+          <form onSubmit={handleRegistration} className="space-y-4 max-h-[70vh] overflow-y-auto pr-1">
             <div className="space-y-2">
-              <Label htmlFor="fullName" className="text-white">ФИО *</Label>
+              <Label htmlFor="fullName" className="text-white">Фамилия Имя *</Label>
               <Input 
                 id="fullName" 
                 name="fullName" 
                 required 
                 className="bg-slate-800 border-cyan-500/30"
-                placeholder="Иванов Иван Иванович"
+                placeholder="Иванов Иван"
               />
             </div>
-            
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-white">Email *</Label>
-                <Input 
-                  id="email" 
-                  name="email" 
-                  type="email" 
-                  required 
-                  className="bg-slate-800 border-cyan-500/30"
-                  placeholder="ivanov@company.com"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="phone" className="text-white">Телефон *</Label>
-                <Input 
-                  id="phone" 
-                  name="phone" 
-                  type="tel" 
-                  required 
-                  className="bg-slate-800 border-cyan-500/30"
-                  placeholder="+7 (999) 123-45-67"
-                />
-              </div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="company" className="text-white">Компания *</Label>
-                <Input 
-                  id="company" 
-                  name="company" 
-                  required 
-                  className="bg-slate-800 border-cyan-500/30"
-                  placeholder="ООО 'Авто'"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="position" className="text-white">Должность *</Label>
-                <Input 
-                  id="position" 
-                  name="position" 
-                  required 
-                  className="bg-slate-800 border-cyan-500/30"
-                  placeholder="Генеральный директор"
-                />
-              </div>
-            </div>
-            
+
             <div className="space-y-2">
-              <Label className="text-white">Формат участия *</Label>
-              <div className="flex gap-4">
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" name="format" value="offline" required className="text-cyan-500" />
-                  <span className="text-white">Очно</span>
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" name="format" value="online" required className="text-cyan-500" />
-                  <span className="text-white">Онлайн</span>
-                </label>
+              <Label htmlFor="phone" className="text-white">Телефон для связи *</Label>
+              <Input 
+                id="phone" 
+                name="phone" 
+                type="tel" 
+                required 
+                className="bg-slate-800 border-cyan-500/30"
+                placeholder="+7 (999) 123-45-67"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="billingEmail" className="text-white">Адрес эл. почты для выставления счёта *</Label>
+              <Input 
+                id="billingEmail" 
+                name="billingEmail" 
+                type="email" 
+                required 
+                className="bg-slate-800 border-cyan-500/30"
+                placeholder="billing@company.com"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="company" className="text-white">Название компании *</Label>
+              <Input 
+                id="company" 
+                name="company" 
+                required 
+                className="bg-slate-800 border-cyan-500/30"
+                placeholder="ООО «Название»"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="inn" className="text-white">ИНН *</Label>
+                <Input 
+                  id="inn" 
+                  name="inn" 
+                  required 
+                  className="bg-slate-800 border-cyan-500/30"
+                  placeholder="1234567890"
+                />
               </div>
+              <div className="space-y-2">
+                <Label htmlFor="kpp" className="text-white">КПП *</Label>
+                <Input 
+                  id="kpp" 
+                  name="kpp" 
+                  required 
+                  className="bg-slate-800 border-cyan-500/30"
+                  placeholder="123456789"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="legalAddress" className="text-white">Юридический адрес *</Label>
+              <Input 
+                id="legalAddress" 
+                name="legalAddress" 
+                required 
+                className="bg-slate-800 border-cyan-500/30"
+                placeholder="г. Москва, ул. Примерная, д. 1"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="seats" className="text-white">Количество мест *</Label>
+              <select
+                id="seats"
+                name="seats"
+                required
+                defaultValue=""
+                className="w-full rounded-md bg-slate-800 border border-cyan-500/30 text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              >
+                <option value="" disabled>Выберите количество</option>
+                {[1,2,3,4,5,6,7,8,9,10].map(n => (
+                  <option key={n} value={n}>{n} {n === 1 ? 'место' : n < 5 ? 'места' : 'мест'}</option>
+                ))}
+              </select>
             </div>
             
             <Button 
@@ -581,12 +606,12 @@ export default function Index() {
                     <p className="font-semibold text-white">{ticketData.company}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-300">Должность</p>
-                    <p className="font-semibold text-white">{ticketData.position}</p>
+                    <p className="text-sm text-gray-300">Кол-во мест</p>
+                    <p className="font-semibold text-white">{ticketData.seats}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-300">Формат</p>
-                    <p className="font-semibold text-white">{ticketData.format === 'offline' ? 'Очно' : 'Онлайн'}</p>
+                    <p className="text-sm text-gray-300">Телефон</p>
+                    <p className="font-semibold text-white">{ticketData.phone}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-300">Дата</p>
