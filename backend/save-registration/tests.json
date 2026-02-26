@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "name": "Save registration",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "fullName": "Иванов Иван",
+        "phone": "+7 999 123-45-67",
+        "billingEmail": "test@company.com",
+        "company": "ООО Тест",
+        "inn": "1234567890",
+        "kpp": "123456789",
+        "legalAddress": "г. Москва, ул. Примерная, д. 1",
+        "seats": 2
+      },
+      "expectedStatus": 200
+    }
+  ]
+}
